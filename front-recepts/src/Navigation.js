@@ -1,7 +1,19 @@
+import { useState, useEffect } from 'react';
+
 import { Link } from 'react-router-dom';
 import './style/Navigation.css';
 
 function Navigation(){
+    const [Category, setCategory] = useState('Загрузка...');
+    
+    useEffect(()=>{
+        fetch('http://127.0.0.1:8000/category/', {
+            mode: 'cors'
+        }).then(response => response.json)
+        .then(response => console.log(response))
+
+    }, [])
+
     return(
         <nav className='category_table'>
             <ul>
