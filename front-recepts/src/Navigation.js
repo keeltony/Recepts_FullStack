@@ -24,7 +24,7 @@ function Navigation(){
                 {Category.map((elem) => {
                     return(
                         <li>
-                            <Link to='//'>{elem['name']}</Link>
+                            <Link to={`/category/${elem['id']}`}>{elem['name']}</Link>
                         </li>
                     )
                 })}         

@@ -14,7 +14,7 @@ function Main() {
 
             <Routes>
                 <Route path='/category' element={<Category />}/>
-                <Route path='/recept/:id' element={<Recipes />} />
+                <Route path='/recept/id' element={<Recipes />} />
                 
             </Routes>
         </div>

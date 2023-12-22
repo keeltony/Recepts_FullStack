@@ -18,9 +18,9 @@ function Category(){
             {Recipes.map((elem) => {
                 return(
                     <li>
-                        <Link to='asd'><h2>{elem['name']}</h2></Link>
+                        <Link to={`/recipes/${elem['id']}`}><h2>{elem['name']}</h2></Link>
                         <h4>{elem['description']}</h4>
-                        <p>{elem['category']}</p>
+                        <p>Категория: {elem['category']}</p>
                     </li>
                 )
             })}
