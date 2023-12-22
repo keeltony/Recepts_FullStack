@@ -13,7 +13,7 @@ function Main() {
             <Navigation />
 
             <Routes>
-                <Route path='/category/:category' element={<Category />}/>
+                <Route path='/category' element={<Category />}/>
                 <Route path='/recept/:id' element={<Recipes />} />
                 
             </Routes>

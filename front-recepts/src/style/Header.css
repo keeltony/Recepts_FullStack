@@ -1,7 +1,9 @@
 .header{
-    height: 60px;
-    background-color: rgb(85, 64, 38);
+    height: 70px;
+    background-color: rgba(187, 169, 6, 0.925);
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
+    border-radius: 5px;
 }

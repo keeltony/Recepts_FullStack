@@ -7,8 +7,10 @@ import Main from './Main';
 function App() {
   return (
     <>
+    <div className='root'>
       <Header />
       <Main />
+    </div>
     </>
   );
 }

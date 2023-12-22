@@ -1,0 +1,19 @@
+.category_main{
+    list-style-type: none;
+}
+
+.category_main li{
+    border: black solid 1px;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 0px 20px;
+}
+
+.category_main li a{
+    text-decoration: none;
+    color: black;
+}
+
+.category_main li a:hover{
+    color: rgba(187, 169, 6, 0.925);
+}

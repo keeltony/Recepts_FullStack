@@ -4,26 +4,30 @@ import { Link } from 'react-router-dom';
 import './style/Navigation.css';
 
 function Navigation(){
-    const [Category, setCategory] = useState('Загрузка...');
+    const [Category, setCategory] = useState([]);
     
     useEffect(()=>{
         fetch('http://127.0.0.1:8000/category/', {
-            mode: 'cors'
-        }).then(response => response.json)
-        .then(response => console.log(response))
+        }).then(response => response.json())
+        .then(response => setCategory(response))
 
     }, [])
 
+
     return(
-        <nav className='category_table'>
-            <ul>
+        <nav>
+            <ul className='category_table'>
+                <h3>Категории</h3>
                 <li>
-                    <Link to='/'>Все</Link>
+                    <Link to='/category'>Все</Link>
                 </li>
-                <li>
-                    <Link to='/category/first'>Первое</Link> 
-                </li>
-                
+                {Category.map((elem) => {
+                    return(
+                        <li>
+                            <Link to='//'>{elem['name']}</Link>
+                        </li>
+                    )
+                })}         
             </ul>
         </nav>
     )
