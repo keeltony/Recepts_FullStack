@@ -1,8 +1,8 @@
 import {Route, Routes} from 'react-router-dom';
 
-import Navigation from './Navigation';
 import Category from './Category';
 import Recipes from './Recipes';
+import Recipet from './Recipet';
 import './style/Main.css';
 
 
@@ -10,11 +10,13 @@ import './style/Main.css';
 function Main() {
     return(
         <div className='main'>
-            <Navigation />
+            <Category />
 
             <Routes>
-                <Route path='/category' element={<Category />}/>
-                <Route path='/recept/id' element={<Recipes />} />
+                <Route path='/recipes/:id' element={<Recipes />}/>
+                <Route path='/recipes' element={<Recipes />}/>
+             
+                <Route path='/recept/:id' element={<Recipet />} />
                 
             </Routes>
         </div>
